@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f520a2b3-cdbe-4c54-8616-cd3b2d7da296" name="Changes" comment="Input and Character">
+    <list default="true" id="f520a2b3-cdbe-4c54-8616-cd3b2d7da296" name="Changes" comment="Highlight and PP + common enemy actor">
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Character/BP_EnemyBase.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Aura/Private/Interaction/HighlightableInterface.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Aura/Public/Interaction/HighlightableInterface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aura.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aura.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Assets/Materials/PP_Highlight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Materials/PP_Highlight.uasset" afterDir="false" />
@@ -200,7 +203,7 @@
       <workItem from="1731449362431" duration="383000" />
       <workItem from="1731454735557" duration="299000" />
       <workItem from="1731455227933" duration="2132000" />
-      <workItem from="1731507624765" duration="7650000" />
+      <workItem from="1731507624765" duration="7984000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1">
       <option name="closed" value="true" />
@@ -218,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731511090975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Highlight and PP + common enemy actor">
+      <option name="closed" value="true" />
+      <created>1731516213876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731516213876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +240,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Day 1" />
     <MESSAGE value="Input and Character" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input and Character" />
+    <MESSAGE value="Highlight and PP + common enemy actor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Highlight and PP + common enemy actor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
