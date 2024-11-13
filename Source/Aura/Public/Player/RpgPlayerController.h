@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "RpgPlayerController.generated.h"
 
+class IHighlightableInterface;
 struct FInputActionValue;
 class UInputAction;
 class UInputMappingContext;
@@ -19,6 +20,8 @@ class AURA_API ARpgPlayerController : public APlayerController
 
 public:
 	ARpgPlayerController();
+
+	virtual void PlayerTick(float DeltaTime) override;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -32,4 +35,9 @@ private:
 	TObjectPtr<UInputAction> MoveAction;
 
 	void Move(const FInputActionValue& InputActionValue);
+
+	void CursorTrace();
+
+	TScriptInterface<IHighlightableInterface> LastHighlightedActor;
+	TScriptInterface<IHighlightableInterface> ThisHighlightedActor;
 };

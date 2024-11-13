@@ -20,6 +20,8 @@
 				"C:/RPGProject/Content/Blueprints/Input/IMC_AuraContext.uasset",
 				"C:/RPGProject/Content/Blueprints/PlayerController/BP_RpgPlayerController.uasset",
 				"C:/RPGProject/Content/Blueprints/Game/BP_RpgGameMode.uasset",
+				"C:/RPGProject/Content/Blueprints/Character/BP_EnemyBase.uasset",
+				"C:/RPGProject/Content/Assets/Materials/PP_Highlight.uasset",
 				"C:/RPGProject/Content/Blueprints/Character/Enemy/BP_Goblin_Spear.uasset",
 				"E:/Courses/Druid Mechanics Courses/GAS Official/Startup Project 5_2_0/Aura/Content/Assets/UI/Pickups/T_HealthCrystal.uasset",
 				"E:/Courses/Druid Mechanics Courses/GAS Official/Startup Project 5_2_0/Aura/Content/Assets/UI/Pickups/T_ManaCrystal.uasset",
