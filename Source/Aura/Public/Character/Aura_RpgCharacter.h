@@ -6,6 +6,7 @@
 #include "Character/RpgCharacterBase.h"
 #include "Aura_RpgCharacter.generated.h"
 
+class AAuraPlayerState;
 /**
  * 
  */
@@ -16,5 +17,15 @@ class AURA_API AAura_RpgCharacter : public ARpgCharacterBase
 
 public:
 	AAura_RpgCharacter();
+
+	virtual void OnRep_PlayerState() override;
+
+	//UPROPERTY(EditAnywhere, Category= "State")
+	//AAuraPlayerState* PlayerState;
+
+	virtual void PossessedBy(AController* NewController) override;
+
+private:
+	void InitAbilityActorInfo();
 };
 

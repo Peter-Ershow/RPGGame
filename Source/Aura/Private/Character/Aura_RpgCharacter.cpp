@@ -1,7 +1,10 @@
 // Copyright Petr Ershov
 
 #include "Character/Aura_RpgCharacter.h"
+
+#include "AbilitySystemComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Player/AuraPlayerState.h"
 
 AAura_RpgCharacter::AAura_RpgCharacter()
 {
@@ -14,3 +17,36 @@ AAura_RpgCharacter::AAura_RpgCharacter()
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
 }
+
+void AAura_RpgCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+	
+	//Init ability actor info for the server
+	InitAbilityActorInfo();
+}
+
+void AAura_RpgCharacter::OnRep_PlayerState()
+{
+	Super::OnRep_PlayerState();
+
+	//Init ability actor info for the client
+	InitAbilityActorInfo();
+}
+
+void AAura_RpgCharacter::InitAbilityActorInfo()
+{
+	AAuraPlayerState* AuraPlayerState = GetPlayerState<AAuraPlayerState>();
+	check(AuraPlayerState);
+	
+	AbilitySystemComponent = AuraPlayerState->GetAbilitySystemComponent();
+	AttributeSet = AuraPlayerState->GetAttributeSet();
+	check(AbilitySystemComponent);
+	check(AttributeSet);
+	
+	AbilitySystemComponent->InitAbilityActorInfo(AuraPlayerState, this);
+}
+
+
+
+

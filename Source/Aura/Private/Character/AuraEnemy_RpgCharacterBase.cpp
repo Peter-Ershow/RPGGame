@@ -13,8 +13,15 @@ AAuraEnemy_RpgCharacterBase::AAuraEnemy_RpgCharacterBase()
 
 	AbilitySystemComponent = CreateDefaultSubobject<URpgAbilitySystemComponentBase>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 	
 	AttributeSet = CreateDefaultSubobject<URpgAttributeSet>("AttributeSet");
+}
+
+void AAuraEnemy_RpgCharacterBase::BeginPlay()
+{
+	Super::BeginPlay();
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 }
 
 void AAuraEnemy_RpgCharacterBase::HighlightActor()
