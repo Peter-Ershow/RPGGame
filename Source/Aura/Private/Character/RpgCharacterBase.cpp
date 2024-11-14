@@ -10,6 +10,16 @@ ARpgCharacterBase::ARpgCharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* ARpgCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UAttributeSet* ARpgCharacterBase::GetAttributeSet() const
+{
+	return AttributeSet;
+}
+
 void ARpgCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();

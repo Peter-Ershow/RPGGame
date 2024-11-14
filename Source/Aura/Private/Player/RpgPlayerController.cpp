@@ -29,7 +29,6 @@ void ARpgPlayerController::CursorTrace()
 	//both actors valid
 	if (ThisHighlightedActor && LastHighlightedActor)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Both hit"));
 		//do something only if actor changed
 		if (LastHighlightedActor != ThisHighlightedActor)
 		{
@@ -41,14 +40,12 @@ void ARpgPlayerController::CursorTrace()
 	//if only new one is hovered, highlight it
 	else if (ThisHighlightedActor)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Only new"));
 		ThisHighlightedActor->HighlightActor();
 		LastHighlightedActor = ThisHighlightedActor;
 	}
 	//if no hover on this frame, unhighlight
 	else if (LastHighlightedActor)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Only last"));
 		LastHighlightedActor->UnhighlightActor();
 		LastHighlightedActor = ThisHighlightedActor;
 	}

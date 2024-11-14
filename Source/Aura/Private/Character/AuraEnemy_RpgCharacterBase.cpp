@@ -2,7 +2,20 @@
 
 
 #include "Character/AuraEnemy_RpgCharacterBase.h"
+
+#include "AbilitySystem/RpgAbilitySystemComponentBase.h"
+#include "AbilitySystem/RpgAttributeSet.h"
 #include "Aura/Aura.h"
+
+AAuraEnemy_RpgCharacterBase::AAuraEnemy_RpgCharacterBase()
+{
+	GetMesh()->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	AbilitySystemComponent = CreateDefaultSubobject<URpgAbilitySystemComponentBase>("AbilitySystemComponent");
+	AbilitySystemComponent->SetIsReplicated(true);
+	
+	AttributeSet = CreateDefaultSubobject<URpgAttributeSet>("AttributeSet");
+}
 
 void AAuraEnemy_RpgCharacterBase::HighlightActor()
 {
